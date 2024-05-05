@@ -16,8 +16,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+EXPOSE 3000
 
 # Define environment variable
 ENV NAME World
