@@ -11,7 +11,7 @@ services:
       - MYSQL_DATABASE=news
       - MYSQL_USER=mendo
       - MYSQL_PASSWORD=mendo
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=""
   mysql:
     image: mysql
     ports:
@@ -20,4 +20,4 @@ services:
       - MYSQL_DATABASE=news
       - MYSQL_USER=mendo
       - MYSQL_PASSWORD=mendo
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=""
