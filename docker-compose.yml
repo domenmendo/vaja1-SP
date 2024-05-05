@@ -6,12 +6,18 @@ services:
       - '80:80'
     depends_on:
       - mysql
+    environment:
+      - DATABASE_HOST=mysql
+      - MYSQL_DATABASE=news
+      - MYSQL_USER=mendo
+      - MYSQL_PASSWORD=mendo
+      - MYSQL_ROOT_PASSWORD=
   mysql:
     image: mysql
     ports:
       - '3306:3306'
     environment:
-      MYSQL_ROOT_PASSWORD:
-      MYSQL_DATABASE: news
-      MYSQL_USER: mendo
-      MYSQL_PASSWORD: mendo
+      - MYSQL_DATABASE=news
+      - MYSQL_USER=mendo
+      - MYSQL_PASSWORD=mendo
+      - MYSQL_ROOT_PASSWORD=
